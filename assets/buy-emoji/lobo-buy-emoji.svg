@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <defs>
+    <radialGradient id="eyeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffe08a"/>
+      <stop offset="45%" stop-color="#f5a623"/>
+      <stop offset="100%" stop-color="#d4622a"/>
+    </radialGradient>
+    <radialGradient id="rimGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f5c04a" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#f5c04a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="#0a0b0f"/>
+  <circle cx="64" cy="68" r="46" fill="url(#rimGlow)"/>
+  <!-- ears -->
+  <path d="M38 42 L30 18 L52 34 Z" fill="#14161f" stroke="#e8a838" stroke-width="1.5"/>
+  <path d="M90 42 L98 18 L76 34 Z" fill="#14161f" stroke="#e8a838" stroke-width="1.5"/>
+  <!-- head -->
+  <ellipse cx="64" cy="62" rx="34" ry="30" fill="#12141c" stroke="#c98b1f" stroke-width="1.2"/>
+  <!-- snout -->
+  <ellipse cx="64" cy="72" rx="16" ry="12" fill="#0a0b0f"/>
+  <ellipse cx="64" cy="69" rx="7" ry="5" fill="#050508"/>
+  <!-- eyes -->
+  <ellipse cx="52" cy="58" rx="7" ry="8" fill="url(#eyeGlow)" filter="url(#glow)"/>
+  <ellipse cx="76" cy="58" rx="7" ry="8" fill="url(#eyeGlow)" filter="url(#glow)"/>
+  <circle cx="53" cy="57" r="2.2" fill="#1a1008"/>
+  <circle cx="77" cy="57" r="2.2" fill="#1a1008"/>
+  <!-- mane hint -->
+  <path d="M42 52 Q64 38 86 52" stroke="#b87d1a" stroke-width="2" fill="none" opacity="0.7"/>
+</svg>
