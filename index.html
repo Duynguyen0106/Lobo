@@ -30,8 +30,9 @@
     <nav class="nav">
       <a href="#story">Story</a>
       <a href="#viral">Viral</a>
+      <a href="#chart">Chart</a>
       <a href="#buy">Buy</a>
-      <a href="#contract">Contract</a>
+      <a href="#community">Community</a>
     </nav>
     <a href="https://jup.ag/swap/SOL-k6BE8rsFShzuQ4t2Q5cfpjCdQFFerfqex8Me7Wupump" class="btn btn-primary btn-sm header-cta" target="_blank" rel="noopener noreferrer">Buy $LOBO</a>
     <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
@@ -42,8 +43,10 @@
   <div class="mobile-nav" hidden>
     <a href="#story">Story</a>
     <a href="#viral">Viral</a>
+    <a href="#chart">Chart</a>
     <a href="#buy">Buy</a>
-    <a href="#contract">Contract</a>
+    <a href="#community">Community</a>
+    <a href="https://x.com/i/communities/2034305559038472701" target="_blank" rel="noopener noreferrer">X Community</a>
     <a href="https://jup.ag/swap/SOL-k6BE8rsFShzuQ4t2Q5cfpjCdQFFerfqex8Me7Wupump" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Buy $LOBO</a>
   </div>
 
@@ -173,6 +176,55 @@
       </div>
     </section>
 
+    <section id="chart" class="section chart">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Live Price</span>
+          <h2>$LOBO on DexScreener</h2>
+          <p class="section-desc">Real-time price, volume, and chart — powered by DexScreener.</p>
+        </div>
+
+        <div class="price-stats reveal">
+          <div class="price-stat">
+            <span class="price-stat-label">Price</span>
+            <span class="price-stat-value" id="price-usd">—</span>
+          </div>
+          <div class="price-stat">
+            <span class="price-stat-label">24h Change</span>
+            <span class="price-stat-value" id="price-change">—</span>
+          </div>
+          <div class="price-stat">
+            <span class="price-stat-label">Market Cap</span>
+            <span class="price-stat-value" id="price-mcap">—</span>
+          </div>
+          <div class="price-stat">
+            <span class="price-stat-label">24h Volume</span>
+            <span class="price-stat-value" id="price-volume">—</span>
+          </div>
+          <div class="price-stat">
+            <span class="price-stat-label">Liquidity</span>
+            <span class="price-stat-value" id="price-liquidity">—</span>
+          </div>
+        </div>
+
+        <div class="chart-embed reveal">
+          <div class="chart-embed-fallback" id="chart-fallback">
+            <a href="https://dexscreener.com/solana/k6BE8rsFShzuQ4t2Q5cfpjCdQFFerfqex8Me7Wupump" target="_blank" rel="noopener noreferrer">
+              Open chart on DexScreener →
+            </a>
+          </div>
+          <iframe
+            id="dexscreener-chart"
+            src="https://dexscreener.com/solana/k6BE8rsFShzuQ4t2Q5cfpjCdQFFerfqex8Me7Wupump?embed=1&theme=dark&trades=0&info=0&chartTheme=dark"
+            title="LOBO price chart on DexScreener"
+            loading="lazy"
+            allow="clipboard-write"
+          ></iframe>
+        </div>
+        <p class="chart-updated reveal" id="price-updated">Fetching live data…</p>
+      </div>
+    </section>
+
     <section id="buy" class="section buy">
       <div class="container">
         <div class="buy-panel reveal">
@@ -224,11 +276,21 @@
       </div>
     </section>
 
-    <section class="section community">
+    <section id="community" class="section community">
       <div class="container">
         <div class="community-banner reveal">
           <h2>The Pack Runs Together</h2>
           <p>$LOBO is 100% community-driven. No team allocation. No roadmap. Just a rare wolf and the people who love him.</p>
+          <div class="community-actions">
+            <a href="https://x.com/i/communities/2034305559038472701" class="btn btn-primary btn-lg community-btn" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              Join X Community
+            </a>
+            <a href="https://x.com/manewolf_lobo" class="btn btn-ghost btn-lg community-btn" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              @manewolf_lobo
+            </a>
+          </div>
           <div class="community-tags">
             <span>#BlackManedWolf</span>
             <span>#LOBO</span>
@@ -249,6 +311,11 @@
       <p class="footer-disclaimer">
         $LOBO is a memecoin with no intrinsic value or expectation of financial return. This website is for entertainment only. Not financial advice. DYOR.
       </p>
+      <div class="footer-links">
+        <a href="https://x.com/i/communities/2034305559038472701" target="_blank" rel="noopener noreferrer">X Community</a>
+        <a href="https://dexscreener.com/solana/k6BE8rsFShzuQ4t2Q5cfpjCdQFFerfqex8Me7Wupump" target="_blank" rel="noopener noreferrer">DexScreener</a>
+        <a href="https://jup.ag/swap/SOL-k6BE8rsFShzuQ4t2Q5cfpjCdQFFerfqex8Me7Wupump" target="_blank" rel="noopener noreferrer">Buy on Jupiter</a>
+      </div>
       <p class="footer-copy">© 2026 The Black Maned Wolf · Built by the pack</p>
     </div>
   </footer>

@@ -1,4 +1,83 @@
 const CA = 'k6BE8rsFShzuQ4t2Q5cfpjCdQFFerfqex8Me7Wupump';
+const DEXSCREENER_API = `https://api.dexscreener.com/latest/dex/tokens/${CA}`;
+const PRICE_REFRESH_MS = 30_000;
+
+// Live price from DexScreener API
+function formatUsd(value) {
+  const n = Number(value);
+  if (!Number.isFinite(n)) return '—';
+  if (n >= 1) return `$${n.toLocaleString('en-US', { maximumFractionDigits: 2 })}`;
+  if (n >= 0.0001) return `$${n.toFixed(6)}`;
+  return `$${n.toExponential(2)}`;
+}
+
+function formatCompact(value) {
+  const n = Number(value);
+  if (!Number.isFinite(n)) return '—';
+  if (n >= 1_000_000) return `$${(n / 1_000_000).toFixed(2)}M`;
+  if (n >= 1_000) return `$${(n / 1_000).toFixed(1)}K`;
+  return `$${n.toFixed(0)}`;
+}
+
+function formatChange(value) {
+  const n = Number(value);
+  if (!Number.isFinite(n)) return { text: '—', cls: '' };
+  const sign = n >= 0 ? '+' : '';
+  return { text: `${sign}${n.toFixed(2)}%`, cls: n >= 0 ? 'positive' : 'negative' };
+}
+
+async function fetchLivePrice() {
+  const els = {
+    usd: document.getElementById('price-usd'),
+    change: document.getElementById('price-change'),
+    mcap: document.getElementById('price-mcap'),
+    volume: document.getElementById('price-volume'),
+    liquidity: document.getElementById('price-liquidity'),
+    updated: document.getElementById('price-updated'),
+  };
+  if (!els.usd) return;
+
+  try {
+    const res = await fetch(DEXSCREENER_API);
+    if (!res.ok) throw new Error('API error');
+    const data = await res.json();
+    const pair = data.pairs?.[0];
+    if (!pair) throw new Error('No pair data');
+
+    els.usd.textContent = formatUsd(pair.priceUsd);
+
+    const change = formatChange(pair.priceChange?.h24);
+    els.change.textContent = change.text;
+    els.change.className = `price-stat-value ${change.cls}`;
+
+    els.mcap.textContent = formatCompact(pair.marketCap || pair.fdv);
+    els.volume.textContent = formatCompact(pair.volume?.h24);
+    els.liquidity.textContent = formatCompact(pair.liquidity?.usd);
+
+    const time = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+    els.updated.textContent = `Last updated ${time} · Data from DexScreener`;
+  } catch {
+    els.updated.textContent = 'Could not load live price — view chart below for current data';
+  }
+}
+
+fetchLivePrice();
+setInterval(fetchLivePrice, PRICE_REFRESH_MS);
+
+// DexScreener chart embed fallback
+(function initChartEmbed() {
+  const frame = document.getElementById('dexscreener-chart');
+  const container = frame?.closest('.chart-embed');
+  if (!frame || !container) return;
+
+  frame.addEventListener('load', () => container.classList.add('loaded'));
+
+  setTimeout(() => {
+    if (!container.classList.contains('loaded')) {
+      container.classList.remove('loaded');
+    }
+  }, 8000);
+})();
 
 // Starfield background
 (function initStars() {
