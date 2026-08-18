@@ -30,11 +30,23 @@ Then open [http://localhost:8080](http://localhost:8080).
 
 ### Vercel
 
+**Do not use "Redeploy" on the old prebuilt deployment** — create a new one instead:
+
+1. Go to [vercel.com/dashboard](https://vercel.com/dashboard)
+2. Open your **Lobo** project → **Settings** → **Git**
+3. Click **Connect Git Repository** → select **Duynguyen0106/Lobo**
+4. Set **Production Branch** to `main`, leave **Build Command** empty, **Output Directory** as `.`
+5. Go to **Deployments** → **Create Deployment** → choose branch `main` → **Deploy**
+
+Or delete the old project and re-import: [vercel.com/new](https://vercel.com/new) → Import **Duynguyen0106/Lobo** → Deploy.
+
+**CLI (from your machine):**
 ```bash
+git clone https://github.com/Duynguyen0106/Lobo.git && cd Lobo
+npx vercel login
+npx vercel link
 npx vercel deploy --prod
 ```
-
-Or connect the GitHub repo at [vercel.com/new](https://vercel.com/new).
 
 ## Links
 
