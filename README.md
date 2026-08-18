@@ -22,7 +22,19 @@ Then open [http://localhost:8080](http://localhost:8080).
 
 ## Deploy
 
-This is a static site — deploy to GitHub Pages, Vercel, Netlify, or any static host. Point the root to this directory.
+### GitHub Pages (recommended)
+
+1. Enable Pages: [Repo Settings → Pages](https://github.com/Duynguyen0106/Lobo/settings/pages) → Source: **GitHub Actions**
+2. Push to `main` — the workflow deploys automatically
+3. Live at: **https://duynguyen0106.github.io/Lobo/**
+
+### Vercel
+
+```bash
+npx vercel deploy --prod
+```
+
+Or connect the GitHub repo at [vercel.com/new](https://vercel.com/new).
 
 ## Links
 
