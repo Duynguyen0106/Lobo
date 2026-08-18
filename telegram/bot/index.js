@@ -10,7 +10,8 @@ const LINKS = {
   dexscreener: `https://dexscreener.com/solana/${CA}`,
   trojan: 'https://t.me/TrojanOnSolana',
   maestro: 'https://t.me/maestro',
-  maestroGroup: 'https://t.me/maestrogroupbot',
+  maestroBuyBot: 'https://t.me/MaestroBuyBot',
+  rayBot: 'https://t.me/ray_red_bot',
   xCommunity: 'https://x.com/i/communities/2034305559038472701',
   xProfile: 'https://x.com/manewolf_lobo',
 };
@@ -138,7 +139,8 @@ bot.command('links', async (ctx) => {
       [Markup.button.url('📊 DexScreener', LINKS.dexscreener)],
       [Markup.button.url('⚡ Trojan', LINKS.trojan), Markup.button.url('🎯 Maestro', LINKS.maestro)],
       [Markup.button.url('🐦 X Community', LINKS.xCommunity)],
-      [Markup.button.url('📢 Buy/Sell Alerts Bot', LINKS.maestroGroup)],
+      [Markup.button.url('📢 Buy/Sell Alerts', LINKS.maestroBuyBot)],
+      [Markup.button.url('📡 RayBot Tracker', LINKS.rayBot)],
     ]),
   });
 });

@@ -38,4 +38,4 @@ Set `TELEGRAM_BOT_TOKEN` as an environment variable on Railway, Render, or Fly.i
 
 ## Full group setup
 
-See [../SETUP.md](../SETUP.md) for buy bots, Maestro Group alerts, moderation, and pinned messages.
+See [../SETUP.md](../SETUP.md) for buy bots, Maestro Buy Bot alerts, moderation, and pinned messages.
