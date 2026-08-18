@@ -31,6 +31,11 @@ https://x.com/i/communities/2034305559038472701
 
 ━━━━━━━━━━━━━━━━━━━━
 
+📢 **LIVE BUY ALERTS**
+Add @OfficialSolanaBuyBot to this group → /add → paste CA above
+
+━━━━━━━━━━━━━━━━━━━━
+
 📌 **GROUP COMMANDS**
 /price — live price
 /ca — contract address

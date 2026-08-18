@@ -10,7 +10,7 @@ const LINKS = {
   dexscreener: `https://dexscreener.com/solana/${CA}`,
   trojan: 'https://t.me/TrojanOnSolana',
   maestro: 'https://t.me/maestro',
-  maestroBuyBot: 'https://t.me/MaestroBuyBot',
+  solanaBuyBot: 'https://t.me/OfficialSolanaBuyBot',
   rayBot: 'https://t.me/ray_red_bot',
   xCommunity: 'https://x.com/i/communities/2034305559038472701',
   xProfile: 'https://x.com/manewolf_lobo',
@@ -139,7 +139,7 @@ bot.command('links', async (ctx) => {
       [Markup.button.url('📊 DexScreener', LINKS.dexscreener)],
       [Markup.button.url('⚡ Trojan', LINKS.trojan), Markup.button.url('🎯 Maestro', LINKS.maestro)],
       [Markup.button.url('🐦 X Community', LINKS.xCommunity)],
-      [Markup.button.url('📢 Buy/Sell Alerts', LINKS.maestroBuyBot)],
+      [Markup.button.url('📢 Solana Buy Alerts', LINKS.solanaBuyBot)],
       [Markup.button.url('📡 RayBot Tracker', LINKS.rayBot)],
     ]),
   });

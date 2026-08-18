@@ -41,13 +41,11 @@ You do **not** build a custom buy bot for trading. Solana memecoins use establis
 
 6. Tap a buy button (0.1 SOL, 0.5 SOL, etc.)
 
-### Maestro (multi-chain, also has group alerts)
+### Maestro (trading only — not group alerts)
 
-**Trading bot:** [Maestro](https://t.me/maestro) — `/start`, fund wallet, paste CA.
+**Trading bot:** [@Maestro](https://t.me/maestro) — `/start`, fund wallet, paste CA.
 
-**Group buy/sell alerts:** [@MaestroBuyBot](https://t.me/MaestroBuyBot) — see Step 3 below.
-
-> ⚠️ The alerts bot is **@MaestroBuyBot**, not "Maestro Group Bot". Only use links from [maestrobots.com](https://www.maestrobots.com/) or [@MaestroBots](https://t.me/MaestroBots).
+> ⚠️ **@MaestroBuyBot only supports ETH and BSC** for group buy alerts — not Solana. Use the bots in Step 3 instead.
 
 ### Jupiter (web, no bot wallet)
 
@@ -57,39 +55,44 @@ https://jup.ag/swap/SOL-k6BE8rsFShzuQ4t2Q5cfpjCdQFFerfqex8Me7Wupump
 
 ---
 
-## Step 3 — Live buy/sell alerts in the group
+## Step 3 — Live buy alerts in the group (Solana)
 
-### Option A — Maestro Buy Bot (recommended)
+$LOBO is on **Solana**, so you need a Solana-specific buy bot. Maestro Buy Bot only shows ETH/BSC — skip it.
 
-Posts buy, sell, and burn alerts in your group when someone trades $LOBO.
+### Option A — Solana Buy Bot (recommended, free)
 
-1. Open **[@MaestroBuyBot](https://t.me/MaestroBuyBot)** — official bot from @MaestroBots
-2. Tap **Add to Group** → select your LOBO group
-3. Make the bot a **group admin** (post messages + send media)
-4. In the group, send: `/start`
-5. Tap **+ Add Token**
-6. Chain: **Solana**
-7. Contract:
+Made by [@MyroSOL](https://t.me/MyroSOL). Built specifically for Solana token buy alerts in groups.
+
+1. Open [@OfficialSolanaBuyBot](https://t.me/OfficialSolanaBuyBot)
+2. **Add to Group** → select your LOBO group
+3. Make the bot a **group admin**
+4. **Important:** You need at least **2 real members** in the group (not just bots) or features won't work — add a friend or second account
+5. In the group, send `/start` to the bot
+6. Send `/add` and paste the contract when prompted:
 
    ```
    k6BE8rsFShzuQ4t2Q5cfpjCdQFFerfqex8Me7Wupump
    ```
 
-8. Symbol: `LOBO`
-9. Optional: lower TX threshold to $25–$50 for more alerts, add 🐺 emoji
+7. Send `/settings` → select LOBO → set **Min. Buy** threshold (e.g. `$10` or `$25` USD)
 
-Docs: [maestrobots.com/docs/buy](https://www.maestrobots.com/docs/buy)
+> If the bot doesn't respond, repeat the command quickly — Telegram bots time out if you wait too long between steps.
 
-### Option B — RayBot (alternative)
+### Option B — RayBot (buy/sell + price alerts)
 
-If Maestro Buy Bot doesn't work for your token yet, use RayBot's **Token Activity Tracker**:
+1. Open [@ray_red_bot](https://t.me/ray_red_bot)
+2. Add it to your LOBO group
+3. In the group send: `/start` then `/activate`
+4. Add the token:
 
-1. Open [@ray_red_bot](https://t.me/ray_red_bot) (or any bot from [raybot.app](https://raybot.app))
-2. `/start` → add your group as a notification destination
-3. Add token `k6BE8rsFShzuQ4t2Q5cfpjCdQFFerfqex8Me7Wupump`
-4. Enable **Size** alerts (large buys/sells) and **Price Change** alerts
+   ```
+   /add k6BE8rsFShzuQ4t2Q5cfpjCdQFFerfqex8Me7Wupump
+   ```
 
-Free tier: 10 wallets / token tracking limits apply.
+5. In DM with RayBot: **Tokens** → configure **Size** (min USD for buy/sell alerts) and **Price Change** %
+6. Fine-tune in the [RayBot web panel](https://docs.raybot.app/start/web) under your group's destination
+
+Free tier limits apply (token count varies by plan).
 
 ---
 
@@ -173,7 +176,7 @@ Pin these links in group **description** or **topics**:
 
 - [ ] Public group created with photo + description
 - [ ] Pinned message with CA and buy links
-- [ ] Maestro Buy Bot ([@MaestroBuyBot](https://t.me/MaestroBuyBot)) tracking LOBO — or RayBot as backup
+- [ ] Solana Buy Bot ([@OfficialSolanaBuyBot](https://t.me/OfficialSolanaBuyBot)) posting buy alerts — or RayBot
 - [ ] LOBO community bot running (`/price`, `/ca`, welcome)
 - [ ] Rose or Shieldy for moderation
 - [ ] All admins verified — **never DM for "support"**
@@ -197,6 +200,6 @@ Pin these links in group **description** or **topics**:
 |------|-------|
 | Buy (bot) | [@TrojanOnSolana](https://t.me/TrojanOnSolana) → paste CA |
 | Buy (web) | [Jupiter](https://jup.ag/swap/SOL-k6BE8rsFShzuQ4t2Q5cfpjCdQFFerfqex8Me7Wupump) |
-| Group alerts | [@MaestroBuyBot](https://t.me/MaestroBuyBot) or [@ray_red_bot](https://t.me/ray_red_bot) |
+| Group buy alerts | [@OfficialSolanaBuyBot](https://t.me/OfficialSolanaBuyBot) or [@ray_red_bot](https://t.me/ray_red_bot) |
 | Price chart | [DexScreener](https://dexscreener.com/solana/k6BE8rsFShzuQ4t2Q5cfpjCdQFFerfqex8Me7Wupump) |
 | X Community | [Join](https://x.com/i/communities/2034305559038472701) |
