@@ -52,3 +52,9 @@ npx vercel deploy --prod
 
 - [Jupiter Swap](https://jup.ag/swap/SOL-k6BE8rsFShzuQ4t2Q5cfpjCdQFFerfqex8Me7Wupump)
 - [DexScreener](https://dexscreener.com/solana/k6BE8rsFShzuQ4t2Q5cfpjCdQFFerfqex8Me7Wupump)
+
+## Telegram
+
+Full group setup guide (buy bots, alerts, moderation): [telegram/SETUP.md](telegram/SETUP.md)
+
+Community bot: [telegram/bot](telegram/bot)

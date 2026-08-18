@@ -1,0 +1,10 @@
+🐺 Welcome to the pack, {name}!
+
+Read the pinned message for the official CA and how to buy $LOBO.
+
+Quick start:
+• /price — check live price
+• /buy — buy links (Trojan, Jupiter)
+• /ca — copy contract address
+
+⚠️ Admins never DM you. Stay safe.
